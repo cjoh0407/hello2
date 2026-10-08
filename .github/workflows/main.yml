@@ -48,6 +48,6 @@ jobs:
       run: |
         scp target/hello-1.0.0.war ubuntu@52.79.41.61:~/ROOT.war
         ssh -i ~/.ssh/id_rsa ubuntu@52.79.41.61 << 'EOF'
-          cp ROOT.war /opt/tomcat/webapps/
+          cp ~/ROOT.war /opt/tomcat/webapps/
         EOF
         
