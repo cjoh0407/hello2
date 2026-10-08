@@ -45,6 +45,9 @@ jobs:
 #        cat ~/.ssh/known_hosts
     
     - name: 운영서버에 배포 진행
-      run: scp target/hello-1.0.0.war ubuntu@52.79.41.61:~/ROOT.war
-      
+      run: |
+        scp target/hello-1.0.0.war ubuntu@52.79.41.61:~/ROOT.war
+        ssh -i ~/.ssh/id_rsa ubuntu@52.79.41.61 << 'EOF'
+          cp ROOT.war /opt/tomcat/webapps/
+        EOF
         
