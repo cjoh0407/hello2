@@ -19,7 +19,6 @@ jobs:
     - name: git 저장소 소스 복사후의 hello 폴더 구조
       run: |   # 리눅스 쉘 명령어 2줄 이상 실행시
         ls -la
-        ls -la hello
       
     - name: 메이븐 빌드
       run: mvn clean package
