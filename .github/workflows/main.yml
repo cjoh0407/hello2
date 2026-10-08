@@ -27,14 +27,14 @@ jobs:
     - name: 보안환경변수를 이용하여 개인키 파일생성
       run: |
         mkdir -p ~/.ssh
-        echo "${{ SERVER_SSH_KEY }}" > ~/.ssh/id_rsa
+        echo "${{ secrets.SERVER_SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         
         # 제공되는 라이브러리를 이용하여 해본 것
     - name: actions을 사용하여 보안환경변수를 이용하여 개인키 파일생성
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ SERVER_SSH_KEY }}        
+        ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}        
         
     - name: 서버연결 시 지문등록
       run: ssh-keyscan -t ed25519 52.79.41.61 >> ~/.ssh/known_hosts
