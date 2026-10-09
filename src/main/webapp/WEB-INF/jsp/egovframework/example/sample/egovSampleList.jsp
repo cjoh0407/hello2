@@ -60,7 +60,7 @@
 <body style="text-align:center; margin:0 auto; display:inline; padding-top:100px;">
     <form:form modelAttribute="searchVO" id="listForm" name="listForm" method="post">
         <input type="hidden" name="selectedId" />
-        이제는 docker 이미지로 실행되는 것으로 수정된 목록
+        runner - 이제는 docker 이미지로 실행되는 것으로 수정된 목록
         <div id="content_pop">
         	<!-- 타이틀 -->
         	<div id="title">
