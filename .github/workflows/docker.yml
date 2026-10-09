@@ -56,11 +56,11 @@ jobs:
 #        cat ~/.ssh/id_rsa
 #        cat ~/.ssh/known_hosts
   
-  deploy:
-    needs: build
-    name: 운영서버에 배포 진행
-    runs-on: ubuntu-ratest
-    steps:
+#  deploy:
+#    needs: build
+#    name: 운영서버에 배포 진행
+#    runs-on: ubuntu-ratest
+#    steps:
      
     - name: 배포 실행
       run: |
