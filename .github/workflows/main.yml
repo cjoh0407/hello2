@@ -37,7 +37,7 @@ jobs:
         ssh-private-key: ${{ secrets.SERVER_SSH_KEY }}        
         
     - name: 서버연결 시 지문등록
-      run: ssh-keyscan -t ed25519 52.79.41.61 >> ~/.ssh/known_hosts
+      run: ssh-keyscan -t ed25519 3.38.152.247 >> ~/.ssh/known_hosts
       
 #    - name: 개인키파일확인
 #      run: |
@@ -46,8 +46,8 @@ jobs:
     
     - name: 운영서버에 배포 진행
       run: |
-        scp target/hello-1.0.0.war ubuntu@52.79.41.61:~/ROOT.war
-        ssh -i ~/.ssh/id_rsa ubuntu@52.79.41.61 << 'EOF'
+        scp target/hello-1.0.0.war ubuntu@3.38.152.247:~/ROOT.war
+        ssh -i ~/.ssh/id_rsa ubuntu@3.38.152.247 << 'EOF'
           cp ~/ROOT.war /opt/tomcat/webapps/
         EOF
         
