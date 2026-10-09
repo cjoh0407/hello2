@@ -34,9 +34,20 @@
      
      <!-- docker를 이용한 빌드 및 배포 용 -->
         <!-- Mysql (POM에서 commons-dbcp, mysql-connector-java 관련 라이브러리 설정 ) --> 
+<!--   
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://172.31.6.166:3306/kosa_db" />
+        <property name="username" value="root"/>
+        <property name="password" value="kosa1004"/>
+    </bean> 
+     --> 
+          <!-- runner를 이용한 빌드 및 배포 용 -->
+        <!-- Mysql (POM에서 commons-dbcp, mysql-connector-java 관련 라이브러리 설정 ) --> 
+  
+    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://172.17.169.36:23306/kosa_db" />
         <property name="username" value="root"/>
         <property name="password" value="kosa1004"/>
     </bean> 
