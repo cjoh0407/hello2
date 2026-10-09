@@ -3,7 +3,7 @@ name: 전자정부프레임워크를 사용하여 빌드 및 배포
 on:
   push:
     branches:
-      - main       # 주석 : main 브랜치에 push가 되면 actions가 동작함
+      - empty       # 주석 : main 브랜치에 push가 되면 actions가 동작함
 
 jobs:
   build:
