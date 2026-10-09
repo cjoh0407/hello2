@@ -35,6 +35,6 @@ jobs:
         #docker 관련 실행명령어 기록
         docker stop hello_app
         docker rm hello_app
-        docker rmi -t ${{ secrets.DOCKER_USERNAME }}/hello:latest
+        docker rmi ${{ secrets.DOCKER_USERNAME }}/hello:latest
         docker run -dit --name hello_app -p 80:8080 ${{ secrets.DOCKER_USERNAME }}/hello:latest
             
