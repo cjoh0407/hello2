@@ -48,7 +48,7 @@ jobs:
 
     - name: docker hub 이미지 저장
       run: |
-        docker push -t ${{ secrets.DOCKER_USERNAME }}/hello:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/hello:latest
         
         
 #    - name: 개인키파일확인
