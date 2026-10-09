@@ -5,6 +5,10 @@ on:
     branches:
       - main       # 주석 : main 브랜치에 push가 되면 actions가 동작함
 
+jobs:
+  build:
+    runs-on: [self-hosted, kosa-label]   # 어떤 운영체제 버전에서 실행하는지 설정
+    
     steps:
     - name: 소스 check out
       uses: actions/checkout@v3
